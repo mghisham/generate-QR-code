@@ -12,9 +12,15 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Clear
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -83,7 +89,7 @@ fun InputScreen(
     ) {
         Image(
             painter = painterResource(R.drawable.ic_launcher_foreground),
-            contentDescription = "some useful description",
+            contentDescription = "Icon",
             modifier = Modifier
                 // Set image size to 40 dp
                 .size(250.dp)
@@ -91,10 +97,15 @@ fun InputScreen(
 
         var text by remember { mutableStateOf("https://mghisham.github.io/") }
 
-        TextField(
+        OutlinedTextField(
             value = text,
             onValueChange = { text = it },
-            label = { Text("Enter your text") }
+            label = { Text("Enter your text") },
+            trailingIcon = {
+                IconButton(onClick = { text = "" }) {
+                    Icon(Icons.Filled.Clear, contentDescription = "Clear text")
+                }
+            }
         )
 
         Button(
@@ -152,7 +163,6 @@ val String.generateQRCode: Bitmap
             }
         } catch (e: WriterException) {
             Log.d("TAG", "generateQRCode: ${e.message}")
-
         }
         return bitmap
     }

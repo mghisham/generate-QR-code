@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.mghisham.scandroid"
+    namespace = "com.hm.qrcode"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.mghisham.scandroid"
+        applicationId = "com.hm.qrcode"
         minSdk = 24
         targetSdk = 33
         versionCode = 1

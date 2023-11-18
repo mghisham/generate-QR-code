@@ -1,4 +1,4 @@
-package com.mghisham.scandroid
+package com.hm.qrcode
 
 import org.junit.Test
 

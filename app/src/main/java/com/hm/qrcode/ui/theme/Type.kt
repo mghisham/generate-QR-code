@@ -1,4 +1,4 @@
-package com.mghisham.scandroid.ui.theme
+package com.hm.qrcode.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

@@ -1,4 +1,4 @@
-package com.mghisham.scandroid.ui.theme
+package com.hm.qrcode.ui.theme
 
 import android.app.Activity
 import android.os.Build
